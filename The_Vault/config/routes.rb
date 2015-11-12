@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get "/users/:id", to: "users#show", as: "profile"
 
-  get "/sign_in", to: "sessions#new"
+  get "/login", to: "sessions#new"
 
   post "/sessions", to: "sessions#create"
 end
