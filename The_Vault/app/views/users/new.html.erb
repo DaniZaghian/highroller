@@ -2,6 +2,9 @@ Sign Up
 
 <%= form_for @user do |f| %>
   <div>
+    <%= f.text_field :alias, placeholder: "Alias" %>
+  </div>
+  <div>
     <%= f.text_field :first_name, placeholder: "First Name" %>
   </div>
   <div>
@@ -13,5 +16,7 @@ Sign Up
   <div>
     <%= f.password_field :password, placeholder: "Password" %>
   </div>
+  <!-- TODO -->
+  <!-- add city picker, add password confirmation -->
   <%= f.submit "Sign Up" %>
 <% end %> 
