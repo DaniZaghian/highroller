@@ -12,35 +12,40 @@ User.create!({first_name:FFaker::Name.first_name,
               email:FFaker::Internet.email,
               current_city_id: SF.id,
               alias: "user01",
-              password: 'password'})
+              password: 'password',
+              profile_pic_url: "http://placehold.it/150x150"})
 
 User.create!({first_name:FFaker::Name.first_name,
               last_name:FFaker::Name.last_name,
               email:FFaker::Internet.email,
               current_city_id: SF.id,
               alias: "user02",
-              password: 'password'})
+              password: 'password',
+              profile_pic_url: "http://placehold.it/150x150"})
 
 User.create!({first_name:FFaker::Name.first_name,
               last_name:FFaker::Name.last_name,
               email:FFaker::Internet.email,
               current_city_id: SF.id,
               alias: "user03",
-              password: 'password'})
+              password: 'password',
+              profile_pic_url: "http://placehold.it/150x150"})
 
 User.create!({first_name:FFaker::Name.first_name,
               last_name:FFaker::Name.last_name,
               email:FFaker::Internet.email,
               current_city_id: SF.id,
               alias: "user04",
-              password: 'password'})
+              password: 'password',
+              profile_pic_url: "http://placehold.it/150x150"})
 
 User.create!({first_name:FFaker::Name.first_name,
               last_name:FFaker::Name.last_name,
               email:FFaker::Internet.email,
               current_city_id: SF.id,
               alias: "user05",
-              password: 'password'})
+              password: 'password',
+              profile_pic_url: "http://placehold.it/150x150"})
 
 Event.create({title: "Cockfighting" , user_id: 1, city_id: SF.id, body:"Make some money, meet new friends!" })
 Event.create({title: "Mandingo Fight" , user_id: 2, city_id: SF.id, body:"It's a man fight, bro!" })
