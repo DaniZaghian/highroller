@@ -1,22 +1,28 @@
-Sign Up
 
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.text_field :alias, placeholder: "Alias" %>
+<div class = "container-fluid">
+  <h1>Welcome to The VAULT.</h1>
+  <h3> Please sign up</h3>
+
+  <%= form_for @user do |f| %>
+    <div class ="form-group col-sm-4 col-sm-offset-4">
+      <div>
+        <%= f.text_field :alias, class: "form-control", placeholder: "Alias" %>
+      </div>
+      <div>
+        <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+      </div>
+      <div>
+        <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
+      </div>
+      <div>
+        <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
+      </div>
+      <div>
+        <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+      </div>
+      <!-- TODO -->
+      <!-- add city picker, add password confirmation -->
+      <%= f.submit "Sign Up", class: "btn btn-danger" %>
+    <% end %> 
   </div>
-  <div>
-    <%= f.text_field :first_name, placeholder: "First Name" %>
-  </div>
-  <div>
-    <%= f.text_field :last_name, placeholder: "Last Name" %>
-  </div>
-  <div>
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <!-- TODO -->
-  <!-- add city picker, add password confirmation -->
-  <%= f.submit "Sign Up" %>
-<% end %> 
+</div>
