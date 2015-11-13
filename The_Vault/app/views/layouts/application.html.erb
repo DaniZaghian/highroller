@@ -28,17 +28,16 @@
 	        <!-- Collect the nav links, forms, and other content for toggling -->
 	        <div class="collapse navbar-collapse" id="navbar-collapse-4">
           <ul class="nav navbar-nav navbar-right">
-
+						
+						<% if current_user %> 
             <li><a href="/">Home</a></li>
-
+						<% end %>
 
             <% if current_user %> 
              <li> <%= link_to "Profile", user_path(current_user), class: "profile" %></li>
             <% end %>
 								
 
-						
-					<li> <a href="/users/new">Sign Up</a></li>
 
 					<% if current_user %>
 						<li><%= link_to "Log out",  logout_path, method: "destroy" %> </li>
