@@ -11,7 +11,7 @@
   <h3>User's events</h3>
   <%@user.events.each do |event| %>
     <div>
-      <%= event.title %>
+      <%= link_to "#{event.title}", event_path %>
     </div>
   <%end%>
 </div>
