@@ -7,15 +7,40 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'ffaker'
 SF = City.create({name: "San Francisco"})
-5.times do
-  User.create!({first_name:FFaker::Name.first_name,
+User.create!({first_name:FFaker::Name.first_name,
               last_name:FFaker::Name.last_name,
               email:FFaker::Internet.email,
               current_city_id: SF.id,
-              alias: FFaker::Name.name,
+              alias: "user01",
               password: 'password'})
 
-end
+User.create!({first_name:FFaker::Name.first_name,
+              last_name:FFaker::Name.last_name,
+              email:FFaker::Internet.email,
+              current_city_id: SF.id,
+              alias: "user02",
+              password: 'password'})
+
+User.create!({first_name:FFaker::Name.first_name,
+              last_name:FFaker::Name.last_name,
+              email:FFaker::Internet.email,
+              current_city_id: SF.id,
+              alias: "user03",
+              password: 'password'})
+
+User.create!({first_name:FFaker::Name.first_name,
+              last_name:FFaker::Name.last_name,
+              email:FFaker::Internet.email,
+              current_city_id: SF.id,
+              alias: "user04",
+              password: 'password'})
+
+User.create!({first_name:FFaker::Name.first_name,
+              last_name:FFaker::Name.last_name,
+              email:FFaker::Internet.email,
+              current_city_id: SF.id,
+              alias: "user05",
+              password: 'password'})
 
 Event.create({title: "Cockfighting" , user_id: 1, city_id: SF.id, body:"Make some money, meet new friends!" })
 Event.create({title: "Mandingo Fight" , user_id: 2, city_id: SF.id, body:"It's a man fight, bro!" })
