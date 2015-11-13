@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'users#index'
+  root to: 'sessions#new'
 
   resources :users
 
@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
   post "/sessions", to: "sessions#create"
 
-  delete "/sessions/:id", to: "sessions#destroy"
+
+	post "/logout", to: "sessions#destroy"
+  
+
+  #delete "/sessions/:id", to: "sessions#destroy"
 
   get "/users/:id", to: "users#show"
 

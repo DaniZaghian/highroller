@@ -9,7 +9,6 @@
 <body>
 <!--navbar goes here -->
 <!-- Adds a navigation bar -->
-	<div class="container-fluid">
 
 	    
 	    <!-- Second navbar for profile settings -->
@@ -36,20 +35,26 @@
             <% if current_user %> 
              <li> <%= link_to "Profile", user_path(current_user), class: "profile" %></li>
             <% end %>
+								
 
-					<li> <a href="/users/new">Sign Up</a></li>
 						
+					<li> <a href="/users/new">Sign Up</a></li>
+
+					<% if current_user %>
+						<li><%= link_to "Log out",  logout_path, method: "destroy" %> </li>
+							<% else %>
 							<li><a href="/login">Log In</a></li>
-            
+							<% end %>
+
            
            
 	        </div><!-- /.navbar-collapse -->
 	      </div><!-- /.container -->
 	    </nav><!-- /.navbar -->
-	</div><!-- /.container-fluid -->
 
 
 <%= yield %>
+
 
 </body>
 </html>
