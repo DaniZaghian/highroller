@@ -4,14 +4,14 @@
 	  First Name: <%= @user.first_name %><br>
 	  Last Name: <%= @user.last_name %><br>
 	  Email: <%= @user.email %><br>
-	  Current City: <%= @user.current_city_id %><br>
-	  Profile Pic: <%= image_tag("#{ @user.profile_pic_url}")%>
+	  Current City: <%= @user.city %><br>
+	  Profile Pic: <%= image_tag("#{ @user.profile_pic_url}")%><br>
 	  Join Date: <%= @user.created_at %>
 	</div>
   <h3>User's events</h3>
   <%@user.events.each do |event| %>
     <div>
-      <%= event.title %>
+      <%= link_to "#{event.title}", event_path %>
     </div>
   <%end%>
 </div>
