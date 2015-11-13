@@ -1,9 +1,15 @@
-<h1>Welcome to Users Index.</h1>
+ <div class="background">
+</div>
+<div class="my-container">
 
-<% @users.each do |user| %>
-    <div>
-        Alias: <%= user.alias %> <br>
-        Full name: <%=  user.first_name + " " + user.last_name %>
-    </div>
-    <br>
-<% end %>
+	<h1>Welcome to The Vault.</h1>
+
+	<% @users.each do |user| %>
+	    <div>
+	        Alias: <%= user.alias %> <br>
+	        Full name: <%=  user.first_name + " " + user.last_name %>
+	    </div>
+	    <br>
+	<% end %>
+
+</div>

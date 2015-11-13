@@ -15,3 +15,18 @@
 //= require turbolinks
 //= require twitter/bootstrap
 //= require_tree .
+
+
+function setBodyMinHeight() {
+	// var ele =document.getElementByTagName('body');
+	var ele =document.body;
+	var windowHeight =window.outerHeight;
+	ele.style.minHeight =windowHeight+'px';
+}
+window.onresize =function() {
+	setBodyMinHeight();
+};
+// initialize on first load
+$(document).ready(function() {
+	setBodyMinHeight();
+});
