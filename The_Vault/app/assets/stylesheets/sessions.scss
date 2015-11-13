@@ -1,3 +1,51 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	position: relative;
+	height: 100%;
+    background: url('grim-sf.jpg');
+}
+
+/*.background {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background: #606060;
+    overflow: hidden;
+}
+
+.background:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('grim-sf.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}*/
+
+.my-container {
+	color: whitesmoke;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+h1 {
+	padding-top: 30px;
+	margin-top: 0px;
+}

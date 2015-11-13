@@ -1,11 +1,22 @@
-Passcode, Please
+<div class="background">
+</div>
+<div class="my-container">
+	
+	<h1>The Vault.</h1>
+	<h3>Passcode, Please</h3> 
 
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
-  <div>
-    <%= f.text_field :alias, placeholder: "Alias" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Combination"%>
-  </div>
-  <%= f.submit "Enter The Vault" %>
-<% end %> 
+	<div class="form-group">
+
+		<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+		  <div>
+		    <%= f.text_field :alias, placeholder: "Alias" %>
+		  </div>
+		  <div>
+		    <%= f.password_field :password, placeholder: "Combination"%>
+		  </div>
+		  <%= f.submit "Enter" %>
+		<% end %> 
+		
+	</div>
+
+</div>
