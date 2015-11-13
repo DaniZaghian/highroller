@@ -8,8 +8,7 @@ Rails.application.routes.draw do
 
   post "/sessions", to: "sessions#create"
 
-
-	post "/logout", to: "sessions#destroy"
+  post "/logout", to: "sessions#destroy"
   
 
   #delete "/sessions/:id", to: "sessions#destroy"
