@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20151114003733) do
     t.string   "alias"
     t.string   "email"
     t.string   "password_digest"
-    t.string   "current_city_id"
     t.string   "profile_pic_url"
     t.string   "first_name"
     t.string   "last_name"
