@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'cities/', to: "cities#index"
+
   root to: 'users#new'
 
   resources :users
