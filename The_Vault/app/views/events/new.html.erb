@@ -1,2 +1,26 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<div class = "container-fluid">
+  <h1>New Event</h1>
+
+  <%= form_for @event do |f| %>
+    <div class ="form-group col-xs-2 col-xs-offset-5">
+      <div>
+      	<%= f.hidden_field :user_id, :value => "#{@user.id}" %>
+      </div>
+      <div>
+        <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
+      </div>
+      <div>
+        <%= f.text_area :body, class: "form-control", placeholder: "Describe the event" %>
+      </div>
+      <div>
+        <%= f.text_field :event_date, class: "form-control datepicker", placeholder: "Event Date" %>
+      </div>
+      <div>
+      	<%= f.select :city_id, [['San Francisco','1'],['London','2']] %>
+      </div><br>
+      <!-- TODO -->
+      <!-- add city picker, add password confirmation -->
+      <%= f.submit "Create Event", class: "btn btn-danger" %>
+    <% end %> 
+  </div>
+</div>
