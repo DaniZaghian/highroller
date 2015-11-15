@@ -43,8 +43,8 @@ User.create!({first_name:FFaker::Name.first_name,
               password: 'password',
               profile_pic_url: "http://placehold.it/150x150"})
 
-Event.create({title: "Cockfighting" , user_id: 1, city_id: LD.id, body:"Make some money, meet new friends!" })
-Event.create({title: "Mandingo Fight" , user_id: 2, city_id: SF.id, body:"It's a man fight, bro!" })
-Event.create({title: "Thunderdome" , user_id: 3, city_id: SF.id, body:"Two men enter one man leaves" })
-Event.create({title: "Russian Roulette" , user_id: 4, city_id: LD.id, body:"One out of six chance of going home in a body bag" })
-Event.create({title: "Chemical Weapons Auction" , user_id: 5, city_id: SF.id, body:"Mustard Gas, two for a dollar!" })
+Event.create({title: "Cockfighting" , user_id: 1, city_id: LD.id, body:"Make some money, meet new friends!", event_date: "2015-05-11 00:00:00" })
+Event.create({title: "Mandingo Fight" , user_id: 2, city_id: SF.id, body:"It's a man fight, bro!", event_date: "2015-27-11 00:00:00" })
+Event.create({title: "Thunderdome" , user_id: 3, city_id: SF.id, body:"Two men enter one man leaves", event_date: "2015-05-12 00:00:00" })
+Event.create({title: "Russian Roulette" , user_id: 4, city_id: LD.id, body:"One out of six chance of going home in a body bag", event_date: "2016-07-1 00:00:00" })
+Event.create({title: "Chemical Weapons Auction" , user_id: 5, city_id: SF.id, body:"Mustard Gas, two for a dollar!", event_date: "2015-18-11 00:00:00" })

@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require twitter/bootstrap
+//= require jquery-ui
 //= require_tree .
-
 
 function setBodyMinHeight() {
 	// var ele =document.getElementByTagName('body');
@@ -29,4 +29,7 @@ window.onresize =function() {
 // initialize on first load
 $(document).ready(function() {
 	setBodyMinHeight();
+
+$('.datepicker').datepicker();
+
 });
