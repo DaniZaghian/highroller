@@ -3,14 +3,14 @@
 	  Welcome, <%= @user.alias %><br>
 	  First Name: <%= @user.first_name %><br>
 	  Last Name: <%= @user.last_name %><br>
-	  Email: <%= @user.email %><br>
+	  Email: <%= mail_to @user.email %><br>
 	  Profile Pic: <%= image_tag("#{ @user.profile_pic_url}")%><br>
 	  Member Since: <%= @user.created_at.to_formatted_s(:long_ordinal) %>
 	</div>
-  <h3>User's events</h3>
+  <h3><%= @user.first_name + " " + @user.last_name %>'s Created Events</h3>
   <%@user.events.each do |event| %>
     <div>
-      <%= link_to "#{event.title}", event_path %>
+      <%= link_to "#{event.title} in #{event.city.name}", event_path %>
     </div>
   <%end%>
 </div>
