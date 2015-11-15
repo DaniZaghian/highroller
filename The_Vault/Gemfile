@@ -37,6 +37,11 @@ gem 'therubyracer'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+#bootstrap flash messages
+gem "bootstrap_flash_messages", "~> 1.0.1"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

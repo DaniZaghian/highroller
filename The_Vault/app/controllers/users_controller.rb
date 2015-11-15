@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     redirect_to "/users/#{@user.id}" # <-- go to show
   end
 
+
   def edit
   	@user = User.find(params[:id])
   end
