@@ -1,6 +1,6 @@
 <% @cities.each do |city| %>
     <div>
-      <h3><%= city.name %><h3><br>
+      <h3><%= link_to city.name, city_path(city) %><h3><br>
       <% city.events.each do |event| %>
         <h5><%= link_to event.title, event_path(event) %>
       <%end%>
