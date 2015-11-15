@@ -1,3 +1,5 @@
-<h1><%= @event.title %> in <%= @event.city.name %></h1><br>
+<h1><%= @event.title %> in <%= link_to @event.city.name, city_path(@event.city) %></h1><br>
 <h4>Description: <%= @event.body %><br>
 	Submitted by: <%= link_to @event.user.first_name + ' '+ @event.user.last_name, @event.user %></h4>
+
+

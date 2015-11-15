@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'cities/', to: "cities#index"
-
   root to: 'users#new'
 
   resources :users
 
   resources :events
+
+  resources :cities, only: [:index, :show]
 
   get "/login", to: "sessions#new"
 

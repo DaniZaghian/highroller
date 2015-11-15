@@ -1,0 +1,12 @@
+<div>
+  <h2><%= @city.name %></h2>
+</div>
+
+
+<% @city.events.each do |event| %>
+    <div>
+    	<h5><%= link_to event.title, event_path(event) %></h5>
+    </div>
+<%end%>
+
+<%= link_to "All Cities", cities_path, class:"btn btn-danger" %>
