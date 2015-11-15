@@ -1,8 +1,4 @@
-<!--navbar goes here -->
-<!-- Adds a navigation bar -->
-
-
-	    <!-- Second navbar for profile settings -->
+<!-- Second navbar for profile settings -->
 	    <nav class="navbar navbar-inverse">
 	      <div class="container">
 	        <!-- Brand and toggle get grouped for better mobile display -->
@@ -15,20 +11,39 @@
 	          </button>
 	          <a class="navbar-brand" href="/">The VAULT</a>
 	        </div>
-
+	    
 	        <!-- Collect the nav links, forms, and other content for toggling -->
 	        <div class="collapse navbar-collapse" id="navbar-collapse-4">
           <ul class="nav navbar-nav navbar-right">
 
-						<% if current_user %>
-            <li><a href="/">Home</a></li>
+
+						<% if current_user %> 
+            <li><a href="">Home</a></li>
+						<% end %>
+					
+					<!-- User will be directed to Post form here -->
+					<% if current_user %>
+					<li><a href="">Posts</a></li>
+
+
+		<!-- Cities Dropdown -->
+						
+			      <li class="dropdown">
+			       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cities</a>
+			       
+			       <ul class="dropdown-menu">
+			       <li><a href="#">San Francisco </a></li>
+			        <li><a href="#">London </a></li>
+			       </ul>
+			          </li>
 						<% end %>
 
-            <% if current_user %>
+
+            <% if current_user %> 
              <li> <%= link_to "Profile", user_path(current_user), class: "profile" %></li>
             <% end %>
 
-            <% if !current_user %>
+            <% if !current_user %> 
 								<li><a href="/users/new">Sign Up</a></li>
 					 <% end %>
 
@@ -39,7 +54,8 @@
 							<% end %>
 
 
-
+ 						</ul>
+           
 	        </div><!-- /.navbar-collapse -->
 	      </div><!-- /.container -->
 	    </nav><!-- /.navbar -->
