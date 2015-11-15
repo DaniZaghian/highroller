@@ -3,7 +3,7 @@
 </div>
 
 
-<% @city.events.each do |event| %>
+<% @city.events.order(:event_date).each do |event| %>
     <div>
     	<h5><%= link_to event.title, event_path(event) %></h5>
     </div>
