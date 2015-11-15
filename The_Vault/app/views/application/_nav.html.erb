@@ -23,7 +23,7 @@
 					
 					<!-- User will be directed to Post form here -->
 					<% if current_user %>
-					<li><a href="">Posts</a></li>
+					<li><%= link_to "Add Event", new_event_path %></li>
 						<% end %>
 
 
