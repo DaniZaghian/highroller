@@ -1,7 +1,18 @@
-<%= form_for @event do |f| %>
-	<%= f.text_field :title %>
-	<%= f.text_field :body %>
-	<%= f.text_field :city_id %>
-	<%= f.text_field :event_date %>
-	<%= f.submit "Update Event" %>
+  <%= form_for @event do |f| %>
+    <div class ="form-group col-xs-2 col-xs-offset-5">
+      <div>
+        <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
+      </div>
+      <div>
+        <%= f.text_area :body, class: "form-control", placeholder: "Describe the event" %>
+      </div>
+      <div>
+         <%= f.date_field :event_date, class: "form-control", placeholder: "Event Date" %>
+      </div>
+      <div>
+      	<%= f.select :city_id, [['San Francisco','1'],['London','2']] %>
+      </div><br>
+	  <div>
+		<%= f.submit "Update Event", class: "btn btn-danger" %>
+	  </div>
 <% end %>
