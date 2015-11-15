@@ -1,5 +1,8 @@
 <% @cities.each do |city| %>
     <div>
-      <%= city.name %><br>
+      <h3><%= city.name %><h3><br>
+      <% city.events.each do |event| %>
+        <h5><%= link_to event.title, event_path(event) %>
+      <%end%>
     </div>
   <%end%>
