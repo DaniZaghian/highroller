@@ -7,6 +7,7 @@
 	  Profile Pic: <%= image_tag("#{ @user.profile_pic_url}")%><br>
 	  Member Since: <%= @user.created_at.to_formatted_s(:long_ordinal) %>
 	</div>
+  <%= link_to "Edit Profile", edit_user_path, class:"btn btn-danger" %>
   <h3><%= @user.first_name + " " + @user.last_name %>'s Created Events</h3>
   <%@user.events.each do |event| %>
     <div>
