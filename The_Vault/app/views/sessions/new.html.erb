@@ -1,0 +1,21 @@
+<div class="my-container">
+		
+	<h1>The VAULT.</h1>
+	<h3>Passcode, Please</h3> 
+
+		<div class="form-group">
+
+			<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+				<div class ="form-group col-xs-2 col-xs-offset-5">
+				<div>
+				    <%= f.text_field :alias, class: "form-control", placeholder: "Alias" %>
+				</div>
+				<div>
+				<%= f.password_field :password, class: "form-control", placeholder: "Combination"%>
+				</div><br>
+				<%= f.submit "Enter", class: "btn btn-danger" %>
+				<% end %> 
+				</div>
+
+		</div>
+</div>

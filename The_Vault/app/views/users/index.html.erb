@@ -1,0 +1,15 @@
+ <div class="background">
+</div>
+<div class="my-container">
+
+	<h1>Welcome to The VAULT.</h1>
+
+	<% @users.each do |user| %>
+	    <div>
+	        Alias: <%= user.alias %> <br>
+	        Full name: <%=  user.first_name + " " + user.last_name %>
+	    </div>
+	    <br>
+	<% end %>
+
+</div>
