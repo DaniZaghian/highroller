@@ -1,5 +1,3 @@
-<h1> Event </h1>
-
-<h3><%= @event.title %><br></h3>
+<h1><%= @event.title %> in <%= @event.city.name %></h1><br>
 <h4>Description: <%= @event.body %><br>
-	Author: <%= @event.user.alias %></h4>
+	Submitted by: <%= link_to @event.user.first_name + ' '+ @event.user.last_name, @event.user %></h4>
