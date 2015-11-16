@@ -11,7 +11,7 @@
   <h3><%= @user.first_name + " " + @user.last_name %>'s Created Events</h3>
   <%@user.events.each do |event| %>
     <div>
-      <%= link_to "#{event.title} in #{event.city.name}", event_path %>
+      <%= link_to "#{event.title} in #{event.city.name}", event_path(event) %>
     </div>
   <%end%>
 </div>
