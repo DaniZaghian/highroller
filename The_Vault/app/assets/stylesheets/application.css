@@ -20,7 +20,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    top: 102px;
+    top: 50px;
     height: 100%;
     background-position: 50% 0;
     background: url('grim-sf.jpg');
@@ -70,7 +70,7 @@ body {
 }
 
 h1 {
-	color: whitesmoke;
+	color: lightgray;
 	padding-top: 30px;
 	margin-top: 0px;
 }
@@ -87,8 +87,8 @@ h3 {
         color :green;
 }
 
-.textarea {
-	height: 400px;
+#inline {
+	display: inline-block;
 }
 
 

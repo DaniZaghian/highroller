@@ -10,7 +10,7 @@
         <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
       </div><br>
       <div>
-        <%= f.text_area :body, class: "form-control", placeholder: "Describe the event" %>
+        <%= f.text_area :body, class: "form-control", rows: "8", placeholder: "Describe the event" %>
       </div><br>
       <div>
         <%= f.date_field :event_date, class: "form-control", placeholder: "Event Date" %>
@@ -18,8 +18,6 @@
       <div>
       	<%= f.select :city_id, [['San Francisco','1'],['London','2']], class: "form-control" %>
       </div><br>
-      <!-- TODO -->
-      <!-- add city picker, add password confirmation -->
       <%= f.submit "Create Event", class: "btn btn-danger" %>
     <% end %> 
   </div>
