@@ -1,21 +1,35 @@
-<div class = "my-container content">
-	<div>
-	  <h3>Welcome, <%= @user.alias %><br></h3>
-	  <span class ="info">First Name:</span> <%= @user.first_name %><br>
-	  <span class ="info">Last Name:</span> <%= @user.last_name %><br>
-	  <span class ="info">Email:</span> <%= mail_to @user.email %><br>
-	  <span class ="info">Profile Pic:</span> <%= image_tag("#{ @user.avatar.url(:medium)}")%><br>
-	  <span class ="info">Member Since:</span> <%= @user.created_at.to_formatted_s(:long_ordinal) %>
-	</div>
-  <%= link_to "Edit Profile", edit_user_path, class:"btn btn-danger" %>
-  <h3><%= @user.first_name + " " + @user.last_name %>'s Created Events</h3>
-  <%@user.events.each do |event| %>
-    <div>
-      <%= link_to "#{event.title} in #{event.city.name}", event_path(event) %>
+<div class="my-container content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-xs-offset-3">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <%= image_tag("#{ @user.avatar.url(:medium)}")%>
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h3><%= @user.alias %></h3>
+                        <cite><i><%= @user.first_name %> <%= @user.last_name %>
+                        </i></cite>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i> <%= mail_to @user.email %>
+                            <br />
+                           <span class ="info">Member Since:</span>
+                            <%= @user.created_at.to_formatted_s(:long_ordinal) %></p>
+                   
+                          <%= link_to "Edit Profile", edit_user_path, class:"btn btn-danger" %>
+          
+                    </div>
+                </div>
+            </div><br>
+            <h3><%= @user.first_name + " " + @user.last_name %>'s Created Events</h3>
+                          <%@user.events.each do |event| %>
+                            <div>
+                              <%= link_to "#{event.title} in #{event.city.name}", event_path(event) %>
+                            </div>
+                          <%end%><br>
+                            <div>
+                          <%= link_to "Add an Event", new_event_path, class:"btn btn-danger" %>
+                          </div>
+        </div>
     </div>
-  <%end%>
-    <div>
-    <%= link_to "Add an Event", new_event_path, class:"btn btn-danger" %>
-    </div>
-
 </div>

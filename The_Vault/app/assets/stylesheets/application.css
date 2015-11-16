@@ -24,7 +24,7 @@
     height: 100%;
     background-position: 50% 0;
     background: url('grim-sf.jpg');
-	background-size: cover;
+	background: transparent;
     background-repeat: no-repeat;
     display: block;
     text-align: center;
@@ -91,6 +91,21 @@ h3 {
 	display: inline-block;
 }
 
+.glyphicon {  
+	margin-bottom: 10px;margin-right: 10px;
+}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+
+.well {
+	padding-top: 50px;
+	background: transparent;
+	border: none;
+}
 
 
 
