@@ -30,6 +30,4 @@ window.onresize =function() {
 $(document).ready(function() {
 	setBodyMinHeight();
 
-$('.datepicker').datepicker();
-
 });

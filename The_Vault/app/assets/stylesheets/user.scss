@@ -36,6 +36,29 @@ h3 {
     color: white;
 }
 
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}
+
 #button1{
-        color :green;
+    top:0px;
+    left:0;
+    background: transparent;
+    border: none !important;
+    width:170px;
+    color: red;
+}
+
+#button_text{
+    color:white
+}
+
+#dropdown {
+    background:transparent;
+    border: none;
+    color:white;
+}
+
+#vault{
+    font-family: "Cracked";
 }

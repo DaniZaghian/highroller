@@ -1,7 +1,9 @@
-<%= form_for @user, :url => user_path, :html => { :multipart => true } do |f| %>
-	<%= f.text_field :first_name %>
-	<%= f.text_field :last_name %>
-	<%= f.text_field :email %>
-  <%= f.file_field :avatar %>
-	<%= f.submit "Update Profile" %>
-<% end %>
+<div class = "content">
+	<%= form_for @user, :url => user_path, :html => { :multipart => true } do |f| %>
+		<%= f.text_field :first_name %>
+		<%= f.text_field :last_name %>
+		<%= f.text_field :email %>
+	  <%= f.file_field :avatar %>
+		<%= f.submit "Update Profile" %>
+	<% end %>
+</div>
