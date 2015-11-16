@@ -23,7 +23,7 @@
             </div><br>
             <h3><%= @user.first_name + " " + @user.last_name %>'s Created Events</h3>
                           <%@user.events.each do |event| %>
-                            <div>
+                            <div class = "text-left col-xs-offset-3">
                               <%= link_to "#{event.title} in #{event.city.name}", event_path(event) %>
                             </div>
                           <%end%><br>

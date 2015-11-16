@@ -16,15 +16,15 @@
  *= require jquery-ui
  */
 
- .content {
+.content {
     position: absolute;
     left: 0;
     width: 100%;
     top: 50px;
     height: 100%;
+    background: url('greybg.jpg');
+    background-size: cover;
     background-position: 50% 0;
-    background: url('grim-sf.jpg');
-	background: transparent;
     background-repeat: no-repeat;
     display: block;
     text-align: center;
@@ -105,6 +105,15 @@ color: #999;
 	padding-top: 50px;
 	background: transparent;
 	border: none;
+}
+
+.selector-text {
+	color: whitesmoke;
+	font-size: 16px;
+}
+
+.navbar {
+	background-color: black;
 }
 
 

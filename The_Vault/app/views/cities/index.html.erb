@@ -1,11 +1,4 @@
 <div class = "content">
-	<% @cities.each do |city| %>
-	    <div>
-	      <h3><%= link_to city.name, city_path(city) %><h3><br>
-	      <% city.events.order(:event_date).each do |event| %>
-	        <h5><%= link_to event.title, event_path(event) %></h5>
-	      <%end%>
-	    </div>
-	<%end%>
+
 </div>
 
