@@ -48,6 +48,7 @@
 .city-bg-3 {
 	background: url('moscow1.jpg');
 	background-size: cover;
+	background-clip: rect
 }
 
 .city-bg-4 {
@@ -76,6 +77,10 @@ h1 {
 }
 
 h3 {
+	color: whitesmoke;
+}
+
+h2 {
 	color: whitesmoke;
 }
 
