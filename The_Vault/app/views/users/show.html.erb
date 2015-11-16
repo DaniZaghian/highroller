@@ -1,11 +1,11 @@
-<div class = "my-container">
+<div class = "my-container content">
 	<div>
-	  Welcome, <%= @user.alias %><br>
-	  First Name: <%= @user.first_name %><br>
-	  Last Name: <%= @user.last_name %><br>
-	  Email: <%= mail_to @user.email %><br>
-	  Profile Pic: <%= image_tag("#{ @user.avatar.url(:medium)}")%><br>
-	  Member Since: <%= @user.created_at.to_formatted_s(:long_ordinal) %>
+	  <h3>Welcome, <%= @user.alias %><br></h3>
+	  <span class ="info">First Name:</span> <%= @user.first_name %><br>
+	  <span class ="info">Last Name:</span> <%= @user.last_name %><br>
+	  <span class ="info">Email:</span> <%= mail_to @user.email %><br>
+	  <span class ="info">Profile Pic:</span> <%= image_tag("#{ @user.avatar.url(:medium)}")%><br>
+	  <span class ="info">Member Since:</span> <%= @user.created_at.to_formatted_s(:long_ordinal) %>
 	</div>
   <%= link_to "Edit Profile", edit_user_path, class:"btn btn-danger" %>
   <h3><%= @user.first_name + " " + @user.last_name %>'s Created Events</h3>
