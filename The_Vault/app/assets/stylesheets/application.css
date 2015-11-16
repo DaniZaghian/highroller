@@ -16,5 +16,82 @@
  *= require jquery-ui
  */
 
+ .content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50px;
+    height: 100%;
+    background-position: 50% 0;
+    background: url('grim-sf.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    text-align: center;
+}
+
+.vault {
+	background: url('vault.jpg');
+	background-size: cover;
+}
+
+.city-bg-1 {
+	background: url('grim-sf.jpg');
+	background-size: cover;
+}
+
+.city-bg-2 {
+	background: url('bigbenblur.jpg');
+	background-size: cover;
+}
+
+.city-bg-3 {
+	background: url('moscow1.jpg');
+	background-size: cover;
+}
+
+.city-bg-4 {
+	background: url('tokyo2.jpg');
+	background-size: cover;
+}
+
+.city-bg-5 {
+	background: url('nytaxiblur.jpg');
+	background-size: cover;
+}
+
+body {
+	color: gray;
+	text-align: center;
+}
+
+.info {
+	color: lightgray;
+}
+
+h1 {
+	color: lightgray;
+	padding-top: 30px;
+	margin-top: 0px;
+}
+
+h3 {
+	color: whitesmoke;
+}
+
+.flash-error {
+    color: white;
+}
+
+#button1{
+        color :green;
+}
+
+#inline {
+	display: inline-block;
+}
+
+
+
 
  
