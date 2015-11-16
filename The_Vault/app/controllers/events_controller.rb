@@ -37,19 +37,43 @@ class EventsController < ApplicationController
   	@event = Event.friendly.find(params[:id])
   end
 
+  # def update
+  #   event = Event.friendly.find(params[:id])
+  #   updated_attributes = params.require(:event).permit(:title, :body, :city_id, :event_date)
+  #   event.update_attributes(updated_attributes)
+  #   redirect_to event
+  # end
+
+
   def update
     event = Event.friendly.find(params[:id])
-    updated_attributes = params.require(:event).permit(:title, :body, :city_id, :event_date)
-    event.update_attributes(updated_attributes)
+    if current_user.events.include? event
+    event.update_attributes(event_params)
     redirect_to event
+    else 
+    flash[:error] = "Error: You must be logged in with the correct user to edit that"
+    redirect_to edit_event_path
   end
+end
 
-  def destroy
+  # def destroy
+  #     id = params[:id]
+  #     event = Event.friendly.find(id)
+  #     event.destroy
+  #     redirect_to cities_path
+  # end
+
+ def destroy
       id = params[:id]
       event = Event.friendly.find(id)
+      if current_user.events.include? event
       event.destroy
       redirect_to cities_path
+    else 
+      flash[:error] = "Error: You must be logged in with the correct user to edit that"
+      redirect_to event_path
   end
+end
 
 
 private
