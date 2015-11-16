@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require twitter/bootstrap
 //= require jquery-ui
+//= require googlemaps
+//= require cities
 //= require_tree .
 
 function setBodyMinHeight() {
@@ -27,7 +29,32 @@ window.onresize =function() {
 	setBodyMinHeight();
 };
 // initialize on first load
+var map;
+
 $(document).ready(function() {
 	setBodyMinHeight();
+  //google maps stuff
+  map = new google.maps.Map(document.getElementById('map'), {
+    disableDefaultUI: true,
+    center: {lat: 37.664372, lng: -121.882163},
+    zoom: 2,
+    styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+  });
+  $.getJSON( "/cities", function( data ) {
+    $.each (data.cities, function(key,value){
+      console.log(value.name + value.lat + value.long);
+      marker_title = value.name;
+      var marker = new google.maps.Marker({
+        position: {lat:value.lat, lng:value.long},
+        map: map,
+        title: marker_title,
+        url: "/cities/" + value.slug})
+        google.maps.event.addListener(marker, "click", function() {
+                      location.assign(marker.url);
+          });
+      });
+
+    });
+
 
 });
