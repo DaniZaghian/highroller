@@ -4,7 +4,7 @@
 	  First Name: <%= @user.first_name %><br>
 	  Last Name: <%= @user.last_name %><br>
 	  Email: <%= mail_to @user.email %><br>
-	  Profile Pic: <%= image_tag("#{ @user.profile_pic_url}")%><br>
+	  Profile Pic: <%= image_tag("#{ @user.avatar.url(:medium)}")%><br>
 	  Member Since: <%= @user.created_at.to_formatted_s(:long_ordinal) %>
 	</div>
   <%= link_to "Edit Profile", edit_user_path, class:"btn btn-danger" %>
