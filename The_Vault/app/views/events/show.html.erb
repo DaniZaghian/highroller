@@ -1,5 +1,9 @@
 <div class = "content">
 	<h1><%= @event.title %> in <%= link_to @event.city.name, city_path(@event.city) %></h1><br>
+	<% if flash[:error] %>
+	<div class="alert alert-danger"><%= flash[:error] %></div>
+	<% end %>
+
 	<h4>Description: <%= @event.body %><br>
 	    Event Date: <%= @event.event_date.to_s(:long) %></br>
 		Submitted by: <%= link_to @event.user.first_name + ' '+ @event.user.last_name, @event.user %></h4><br>

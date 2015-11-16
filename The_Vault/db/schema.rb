@@ -48,11 +48,11 @@ ActiveRecord::Schema.define(version: 20151116054516) do
     t.string   "last_name"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.string   "slug"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.string   "slug"
   end
 
   add_index "users", ["slug"], name: "index_users_on_slug", unique: true, using: :btree
