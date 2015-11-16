@@ -43,6 +43,8 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 #bootstrap flash messages
 gem "bootstrap_flash_messages", "~> 1.0.1"
 
+gem "friendly_id"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
