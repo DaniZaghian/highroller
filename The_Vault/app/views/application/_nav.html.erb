@@ -16,16 +16,6 @@
 	        <div class="collapse navbar-collapse" id="navbar-collapse-4">
           <ul class="nav navbar-nav navbar-right">
 
-
-						<% if current_user %> 
-            <li><a href="">Home</a></li>
-						<% end %>
-					
-					<!-- User will be directed to Post form here -->
-					<% if current_user %>
-					<li><%= link_to "Add Event", new_event_path %></li>
-						<% end %>
-
 						<!--Dropdown for cities -->
 						<% if current_user %>
 					  <li class="dropdown">
@@ -41,6 +31,14 @@
 			          </li>
 			          <% end %>
 
+			        <% if current_user %>
+			        <li><%= link_to "Events", events_path %></li>
+			        <% end %>
+
+					<!-- User will be directed to Post form here -->
+					<% if current_user %>
+					<li><%= link_to "Create Event", new_event_path %></li>
+						<% end %>
         	
 
             <% if current_user %> 
