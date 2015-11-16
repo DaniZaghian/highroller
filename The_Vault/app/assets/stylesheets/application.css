@@ -79,8 +79,8 @@ h3 {
 	color: whitesmoke;
 }
 
-.flash-error {
-    color: white;
+.flash.error {
+    color: green;
 }
 
 #button1{
