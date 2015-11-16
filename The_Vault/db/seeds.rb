@@ -67,7 +67,7 @@ Event.create({title: "Thunderdome" , user_id: 3, city_id: MC.id, body:"Two men e
 Event.create({title: "Russian Roulette" , user_id: 4, city_id: TK.id, body:"One out of six chance of going home in a body bag", event_date: "2016-07-01 00:00:00" })
 Event.create({title: "Chemical Weapons Auction" , user_id: 5, city_id: NY.id, body:"Mustard Gas, two for a dollar!", event_date: "2015-08-11 00:00:00" })
 Event.create({title: "Underground Street Fight" , user_id: 1, city_id: LD.id, body:"Make some money, meet new friends!", event_date: "2015-05-11 00:00:00" })
-Event.create({title: "Torture Dungeon" , user_id: 2, city_id: SF.id, body:"It's a man fight, bro!", event_date: "2015-10-11 00:00:00" })
+Event.create({title: "Torture Dungeon Art Show" , user_id: 2, city_id: SF.id, body:"It's a man fight, bro!", event_date: "2015-10-11 00:00:00" })
 Event.create({title: "Llama Race" , user_id: 3, city_id: MC.id, body:"I don't know if they are alpacas or llamas but man can they run.", event_date: "2015-05-12 00:00:00" })
 Event.create({title: "Yacht Battleship" , user_id: 4, city_id: TK.id, body:"You sunk my battleship.", event_date: "2016-07-01 00:00:00" })
 Event.create({title: "Knife Fight Training - Meetup" , user_id: 5, city_id: NY.id, body:"Short swords or long?", event_date: "2015-08-11 00:00:00" })
