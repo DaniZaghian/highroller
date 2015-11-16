@@ -9,7 +9,7 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="/">The VAULT</a>
+	          <a class="navbar-brand" id="vault" href="/">The VAULT</a>
 	        </div>
 	    
 	        <!-- Collect the nav links, forms, and other content for toggling -->
@@ -26,23 +26,19 @@
 					<li><%= link_to "Add Event", new_event_path %></li>
 						<% end %>
 
+						<!--Dropdown for cities -->
+						<% if current_user %>
+					  <li class="dropdown">
+			       <a class = "dropdown-toggle disabled" href="/cities" class="dropdown-toggle" data-toggle="dropdown">Cities</a>
+			       
+			       <ul class="dropdown-menu">
+			       <li><a href="/cities/1">San Francisco </a></li>
+			        <li><a href="/cities/2">London </a></li>
+			       </ul>
+			          </li>
+			          <% end %>
 
-
-<!-- New cities dropdown -->
-<div class="btn-group">
-  <a href = "/cities"> <button type="button" class="btn btn-default" id="button1">Cities </a> </button> 
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="/cities/1">San Francisco</a></li>
-    <li><a href="/cities/2">London</a></li>
-  </ul>
-</div>
-
-					
-
+        	
 
             <% if current_user %> 
              <li> <%= link_to "Profile", user_path(current_user), class: "profile" %></li>
