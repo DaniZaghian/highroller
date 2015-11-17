@@ -60,7 +60,38 @@
 	background: url('nytaxiblur.jpg');
 	background-size: cover;
 }
-
+.city-bg-6 {
+	background: url('rio.jpg');
+	background-size: cover;
+}
+.city-bg-7 {
+	background: url('johannesburg.jpg');
+	background-size: cover;
+}
+.city-bg-8 {
+	background: url('quebec-city.jpg');
+	background-size: cover;
+}
+.city-bg-9 {
+	background: url('auckland.jpg');
+	background-size: cover;
+}
+.city-bg-10 {
+	background: url('honolulu.jpg');
+	background-size: cover;
+}
+.city-bg-11 {
+	background: url('lagos.jpg');
+	background-size: cover;
+}
+.city-bg-12 {
+	background: url('mexico-city.jpg');
+	background-size: cover;
+}
+.city-bg-13 {
+	background: url('bangkok.jpg');
+	background-size: cover;
+}
 body {
 	color: gray;
 	text-align: center;
@@ -110,7 +141,7 @@ a:hover {
 	display: inline-block;
 }
 
-.glyphicon {  
+.glyphicon {
 	margin-bottom: 10px;
 	margin-right: 10px;
 }
