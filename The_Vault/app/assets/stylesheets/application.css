@@ -130,7 +130,7 @@ a {
 }
 
 a:hover {
-	color: midnightblue;
+	color: firebrick;
 }
 
 .flash-error {
@@ -171,16 +171,17 @@ color: #999;
 
 .opaquebg {
 	margin-top: 30px;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.4);
 	padding-bottom: 30px;
 	border-radius: 20px;
 }
 
 .well {
-	background-color: rgba(0, 0, 0, .7);
+	background-color: rgba(0, 0, 0, .4);
 	padding-bottom: 20px;
 	padding-top: 20px;
 	border-radius: 20px;
+	font-size: 15px;
 }
 
 .avatar img{
@@ -200,6 +201,7 @@ color: #999;
 #panel-heading h3 {
 	font-size: 24px;
 }
+
 .panel-body {
 	padding-bottom: 0px;
 }
@@ -207,3 +209,5 @@ color: #999;
 .panel-body li {
 	font-size: 16px;
  }
+
+
