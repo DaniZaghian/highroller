@@ -1,5 +1,5 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+# The  data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
 #
@@ -21,6 +21,31 @@ TK = City.create({name: "Tokyo",
 NY = City.create({name: "New York",
                   lat: 40.714,
                   long:-74.00})
+City.create({name: "Rio de Janeiro",
+             lat: -22.906847,
+             long:-43.172})
+City.create({name: "Johannesburg",
+             lat: -26.207333,
+             long: 28.044512})
+City.create({name: "Quebec City",
+             lat: 46.803283,
+             long:-71.242})
+City.create({name: "Auckland",
+             lat: -36.848,
+             long:174.76})
+City.create({name: "Honolulu",
+             lat: 21.306,
+             long:-157.85})
+City.create({name: "Lagos",
+             lat: 6.524,
+             long:3.379})
+City.create({name: "Mexico City",
+             lat: 19.432,
+             long:-99.133})
+City.create({name: "Bangkok",
+             lat: 13.756,
+             long:100.501})
+
 
 User.create!({first_name:FFaker::Name.first_name,
               last_name:FFaker::Name.last_name,
