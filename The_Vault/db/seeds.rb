@@ -49,7 +49,7 @@ City.create({name: "Bangkok",
 
 User.create!({first_name:"Bond",
               last_name:"James Bond",
-              email:"007@mi6.gov",
+              email:"007@sis.gov.uk",
               alias: "007",
               password: 'password',
               avatar_file_name:"default_profile_pic.jpg"})
@@ -75,9 +75,9 @@ User.create!({first_name:"Lord",
               password: 'password',
               avatar_file_name:"default_profile_pic.jpg"})
 
-User.create!({first_name:"Kaiser",
-              last_name:"Sose",
-              email:"ksose@notksose.com",
+User.create!({first_name:"Keyser",
+              last_name:"Söze",
+              email:"ksoze@notksoze.com",
               alias: "notksose",
               password: 'password',
               avatar_file_name:"default_profile_pic.jpg"})
@@ -100,13 +100,13 @@ Event.create({title: "Thunderdome" , user_id: 3, city_id: MC.id, body:"Two men e
 Event.create({title: "Russian Roulette" , user_id: 4, city_id: TK.id, body:"One out of six chance of going home in a body bag", event_date: "2016-07-01 00:00:00" })
 Event.create({title: "Chemical Weapons Auction" , user_id: 5, city_id: NY.id, body:"Mustard Gas, two for a dollar!", event_date: "2015-08-11 00:00:00" })
 Event.create({title: "Underground Street Fight" , user_id: 1, city_id: LD.id, body:"It's not like the video game, these dudes are crazy.", event_date: "2015-05-11 00:00:00" })
-Event.create({title: "Torture Dungeon Art Show" , user_id: 2, city_id: SF.id, body:"It's a man fight, bro!", event_date: "2015-10-11 00:00:00" })
+Event.create({title: "Torture Dungeon Art Show" , user_id: 2, city_id: SF.id, body:"Is that a blood spatter or like a paint spatter?", event_date: "2015-10-11 00:00:00" })
 Event.create({title: "Llama Race" , user_id: 3, city_id: MC.id, body:"I don't know if they are alpacas or llamas but man can they run.", event_date: "2015-05-12 00:00:00" })
 Event.create({title: "Yacht Battleship" , user_id: 4, city_id: TK.id, body:"You sunk my battleship.", event_date: "2016-07-01 00:00:00" })
 Event.create({title: "Knife Fight Training - Meetup" , user_id: 5, city_id: 7, body:"Short swords or long?", event_date: "2015-08-11 00:00:00" })
 Event.create({title: "Evil Masquerade Ball" , user_id: 1, city_id: 9, body:"Stanley Kubrick had no idea what he was starting.", event_date: "2015-05-11 00:00:00" })
 Event.create({title: "Butler Jousting" , user_id: 2, city_id: 11, body:"Joust this homey", event_date: "2015-10-11 00:00:00" })
-Event.create({title: "Backyard Brawl" , user_id: 3, city_id: 10, body:"Wrestling is for pansies.", event_date: "2015-05-12 00:00:00" })
+Event.create({title: "Backyard Brawl" , user_id: 6, city_id: 10, body:"Wrestling is for pansies.", event_date: "2015-05-12 00:00:00" })
 Event.create({title: "Traceless Arson Training" , user_id: 4, city_id: 13, body:"Come on baby light my fire and also don't get caught!", event_date: "2016-07-01 00:00:00" })
 Event.create({title: "Firearm Serial Number Removal Workshop" , user_id: 5, city_id: 11, body:"These guns are untraceable!", event_date: "2015-08-11 00:00:00" })
 Event.create({title: "Jean Claude Van Damme Autograph Session" , user_id: 1, city_id: 10, body:"JCVD in da house!!!", event_date: "2015-05-11 00:00:00" })
@@ -116,8 +116,8 @@ Event.create({title: "Rolls Royce Destruction Derby" , user_id: 4, city_id: 9, b
 Event.create({title: "Cruise Missile Test Flights" , user_id: 5, city_id: 10, body:"Now you can target enemies with your smart phone!", event_date: "2015-08-11 00:00:00" })
 Event.create({title: "Midget Tossing" , user_id: 1, city_id: 7, body:"It's not offensive because they get paid.", event_date: "2015-05-11 00:00:00" })
 Event.create({title: "Man Hunting" , user_id: 2, city_id: 9, body:"Hunting a lion isn't fair, but hunting something that can hunt back...", event_date: "2015-10-11 00:00:00" })
-Event.create({title: "Ivory Sale" , user_id: 3, city_id: 8, body:"Two men enter one man leaves", event_date: "2015-05-12 00:00:00" })
-Event.create({title: "Endangered Speices Adoption Faire" , user_id: 4, city_id: 12, body:"Endangered species need homes too...", event_date: "2016-07-01 00:00:00" })
+Event.create({title: "Ivory Sale" , user_id: 3, city_id: 8, body:"Just a little ivory between friends.", event_date: "2015-05-12 00:00:00" })
+Event.create({title: "Endangered Species Adoption Faire" , user_id: 4, city_id: 12, body:"Endangered species need homes too...", event_date: "2016-07-01 00:00:00" })
 Event.create({title: "Chemical Weapons Auction" , user_id: 5, city_id: 13, body:"Nerve gas, it's a gas!", event_date: "2015-08-11 00:00:00" })
 Event.create({title: "Nuclear Weapons Sale" , user_id: 1, city_id: 6, body:"You'll literally glow with envy when you see these deals.", event_date: "2015-05-11 00:00:00" })
 Event.create({title: "Abraham Lincoln Seance" , user_id: 2, city_id: 7, body:"Four score and seven years ago..ah hell I'm dead who cares!", event_date: "2015-10-11 00:00:00" })
