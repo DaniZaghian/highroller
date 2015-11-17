@@ -8,7 +8,7 @@
 		  <div class="panel-body">
 		    <ul class="list-group text-left">
 			    <% city.events.order(:event_date).each do |event| %>
-			    	<li class="list-group-item"><%= link_to event.title, event_path(event) %> -- <%= event.body %></li>
+			    	<li class="list-group-item"><%= link_to event.title, event_path(event) %> -- <%= event.body %> -- by <%= link_to event.user.alias, event.user %></li>
 			    <% end %>
 			</ul>
 		  </div>
