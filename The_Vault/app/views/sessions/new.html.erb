@@ -1,5 +1,9 @@
 <div class="my-container content vault">
-		
+
+		<% if flash[:error] %>
+  <div class="alert alert-danger"><%= flash[:error] %></div>
+  <% end %>
+
 	<h1>The VAULT.</h1>
 	<h3>Passcode, Please</h3> 
 
