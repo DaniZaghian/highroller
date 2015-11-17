@@ -7,7 +7,8 @@
 		<span class ="selector-text">First Name:</span> <%= f.text_field :first_name, class: "form-control" %><br>
 		<span class ="selector-text">Last Name:</span> <%= f.text_field :last_name, class: "form-control" %><br>
 		<span class ="selector-text">Email:</span> <%= f.text_field :email, class: "form-control" %><br>
-	  	<span class ="selector-text">Photo:</span> <%= f.file_field :avatar, class: "form-control" %><br>
+    <span class ="selector-text">Current Pic</span><%= image_tag ("#{ @user.avatar.url(:medium)}")%>
+	  <span class ="selector-text">Upload New:</span> <%= f.file_field :avatar, class: "form-control" %><br>
 		<%= f.submit "Update", class: "btn btn-danger" %>
 	<% end %>
 </div>
