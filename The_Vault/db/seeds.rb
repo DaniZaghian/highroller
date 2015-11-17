@@ -117,7 +117,7 @@ Event.create({title: "Cruise Missile Test Flights" , user_id: 5, city_id: 10, bo
 Event.create({title: "Midget Tossing" , user_id: 1, city_id: 7, body:"It's not offensive because they get paid.", event_date: "2015-05-11 00:00:00" })
 Event.create({title: "Man Hunting" , user_id: 2, city_id: 9, body:"Hunting a lion isn't fair, but hunting something that can hunt back...", event_date: "2015-10-11 00:00:00" })
 Event.create({title: "Ivory Sale" , user_id: 3, city_id: 8, body:"Two men enter one man leaves", event_date: "2015-05-12 00:00:00" })
-Event.create({title: "Endangered Speices Adoption Faire" , user_id: 4, city_id: 12, body:"Endangered species need homes too...", event_date: "2016-07-01 00:00:00" })
+Event.create({title: "Endangered Species Adoption Faire" , user_id: 4, city_id: 12, body:"Endangered species need homes too...", event_date: "2016-07-01 00:00:00" })
 Event.create({title: "Chemical Weapons Auction" , user_id: 5, city_id: 13, body:"Nerve gas, it's a gas!", event_date: "2015-08-11 00:00:00" })
 Event.create({title: "Nuclear Weapons Sale" , user_id: 1, city_id: 6, body:"You'll literally glow with envy when you see these deals.", event_date: "2015-05-11 00:00:00" })
 Event.create({title: "Abraham Lincoln Seance" , user_id: 2, city_id: 7, body:"Four score and seven years ago..ah hell I'm dead who cares!", event_date: "2015-10-11 00:00:00" })
