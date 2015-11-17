@@ -152,7 +152,8 @@ color: #999;
 	border-radius: 20px;
 }
 
-img {
+.avatar img{
+	padding :0px;
 	border-radius: 40px;
 }
 
