@@ -1,19 +1,17 @@
 <div class = "content city-bg-<%= @city.id %>">
 	
 	<div class = "col-xs-4 col-xs-offset-4"><br>
-		<div>
-		  <h2><%= @city.name %></h2>
+		<div id="events-list">
+			<h3><%= @city.name %> Events</h3><br>
+				<% @city.events.order(:event_date).each do |event| %>
+		    		<p class="text-left"><%= link_to event.title, event_path(event) %> -- <%= event.body %></p>
+				<%end%>
 		</div><br>
 
-
-	<% @city.events.order(:event_date).each do |event| %>
-	    <div>
-	    	<p id= "event-link"><%= link_to event.title, event_path(event) %></p>
-	    </div>
-	<%end%>
-  <div data-no-turbolink>
-  	<%= link_to "All Cities", cities_path, class:"btn btn-danger" %> <%= link_to "New Event", new_event_path, class:"btn btn-danger" %>
-  </div>
+	  <div data-no-turbolink>
+	  	<%= link_to "All Cities", cities_path, class:"btn btn-danger" %> <%= link_to "New Event", new_event_path, class:"btn btn-danger" %>
+	  </div>
+	 </div>
+	</div>
 </div>
-
 

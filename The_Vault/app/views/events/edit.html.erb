@@ -1,7 +1,9 @@
 <div class = "content container-fluid">
   <h1> Edit Event </h1><br>
-
-<%= flash[:error] %>
+  
+<% if flash[:error] %>
+  <div class="alert alert-danger"><%= flash[:error] %></div>
+  <% end %>
 
   <%= form_for @event do |f| %>
     <div class ="form-group col-xs-4 col-xs-offset-4">

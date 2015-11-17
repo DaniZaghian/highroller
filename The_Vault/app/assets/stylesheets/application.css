@@ -130,7 +130,7 @@ a {
 }
 
 a:hover {
-	color: midnightblue;
+	color: firebrick;
 }
 
 .flash-error {
@@ -171,25 +171,27 @@ color: #999;
 
 .opaquebg {
 	margin-top: 30px;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.4);
 	padding-bottom: 30px;
 	border-radius: 20px;
 }
 
 .well {
-	background-color: rgba(0, 0, 0, .7);
+	background-color: rgba(0, 0, 0, .4);
 	padding-bottom: 20px;
 	padding-top: 20px;
 	border-radius: 20px;
+	font-size: 15px;
 }
 
-img {
+.avatar img{
+	padding :0px;
 	border-radius: 40px;
 }
 
 .profalias {
 	color: lightgray;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .panel {
@@ -199,6 +201,7 @@ img {
 #panel-heading h3 {
 	font-size: 24px;
 }
+
 .panel-body {
 	padding-bottom: 0px;
 }
@@ -206,3 +209,19 @@ img {
 .panel-body li {
 	font-size: 16px;
  }
+
+ div#events-list {
+ 	padding: 20px;
+ 	border-radius: 10px;
+ 	background-color: rgba(0, 0, 0, .6);
+ }
+
+ div#events-list a {
+ 	color: lightgray;
+ }
+
+ div#events-list a:hover {
+ 	color: firebrick;
+ }
+
+
