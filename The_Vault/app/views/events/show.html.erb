@@ -1,14 +1,26 @@
 <div class = "content">
-	<h1><%= @event.title %> in <%= link_to @event.city.name, city_path(@event.city) %></h1><br>
+
 	<% if flash[:error] %>
 	<div class="alert alert-danger"><%= flash[:error] %></div>
 	<% end %>
 
-	<h4>Description: <%= @event.body %><br>
-	    Event Date: <%= @event.event_date.to_s(:long) %></br>
-		Submitted by: <%= link_to @event.user.first_name + ' '+ @event.user.last_name, @event.user %></h4><br>
+	<div class = "col-xs-4 col-xs-offset-4"><br>
+		<div class="panel panel-default">
+		  <div class="panel-heading" id="panel-heading">
+		    <h3 class="panel-title"><%= @event.title %> in <%= link_to @event.city.name, city_path(@event.city) %></h3>
+		    </div>
+		  <div class="panel-body">
+			<ul class="list-group text-left">
+
+				<li class="list-group-item">Description: <%= @event.body %></li>
+		    	<li class="list-group-item">Event Date: <%= @event.event_date.to_s(:long) %></li>
+				<li class="list-group-item">Submitted by: <%= link_to @event.user.first_name + ' '+ @event.user.last_name, @event.user %></li>
+			</ul>
+		</div>
+	</div>
   <%= link_to "Edit", edit_event_path, class:"btn btn-danger" %>
   <span id="inline">
 	  <%= button_to "Delete", @event, class:"btn btn-danger", method: :delete, data: { confirm: "Are you sure you want to remove #{@event.title}?" } %>
 	</span>
+  </div>
 </div>
