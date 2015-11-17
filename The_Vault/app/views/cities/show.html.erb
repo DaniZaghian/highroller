@@ -9,6 +9,7 @@
 	    	<h5><%= link_to event.title, event_path(event) %></h5>
 	    </div>
 	<%end%>
-
-	<%= link_to "All Cities", cities_path, class:"btn btn-danger" %>
+  <div data-no-turbolink>
+  	<%= link_to "All Cities", cities_path, class:"btn btn-danger" %>
+  </div>
 </div>

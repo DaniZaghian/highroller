@@ -2,11 +2,10 @@ class CitiesController < ApplicationController
 
   def index
   	@cities = City.all
-    if request.xhr?
-        render :json => {
-            :cities => @cities
-        }
-    end
+    respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @cities}
+      end
   end
 
   def show
