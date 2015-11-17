@@ -191,7 +191,7 @@ color: #999;
 
 .profalias {
 	color: lightgray;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .panel {
@@ -208,6 +208,20 @@ color: #999;
 
 .panel-body li {
 	font-size: 16px;
+ }
+
+ div#events-list {
+ 	padding: 20px;
+ 	border-radius: 10px;
+ 	background-color: rgba(0, 0, 0, .6);
+ }
+
+ div#events-list a {
+ 	color: lightgray;
+ }
+
+ div#events-list a:hover {
+ 	color: firebrick;
  }
 
 
