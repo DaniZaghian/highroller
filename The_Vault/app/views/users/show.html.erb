@@ -1,13 +1,13 @@
-<div class="my-container content">
+<div class="my-container content"><br><br>
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-xs-offset-3">
             <div class="well well-sm">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4">
+                    <div class="col-sm-6 col-md-4 avatar">
                         <%= image_tag("#{ @user.avatar.url(:medium)}")%>
                     </div>
                     <div class="col-sm-6 col-md-8">
-                        <h3><%= @user.alias %></h3>
+                        <p class ="profalias"><%= @user.alias %></p>
                         <cite><i><%= @user.first_name %> <%= @user.last_name %>
                         </i></cite>
                         <p>
@@ -21,6 +21,7 @@
                     </div>
                 </div>
             </div><br>
+            <div class = "well well-sm">
             <h3><%= @user.first_name + " " + @user.last_name %>'s Created Events</h3>
                           <%@user.events.each do |event| %>
                             <div class = "text-left col-xs-offset-3">
@@ -30,6 +31,7 @@
                             <div data-no-turbolink>
                           <%= link_to "Add an Event", new_event_path, class:"btn btn-danger" %>
                           </div>
+            </div>
         </div>
     </div>
 </div>
