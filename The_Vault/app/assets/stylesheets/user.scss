@@ -8,10 +8,11 @@ body {
     width: 100%;
     top: 0;
     height: 100%;
-    background: url('grim-sf.jpg');
+    background: url('greybg.jpg');
     background-size: cover;
     background-position: 50% 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-color: black;
     display: block;
     text-align: center;
 }
@@ -30,4 +31,35 @@ h1 {
 
 h3 {
 	color: whitesmoke;
+}
+
+.flash-error {
+    color: white;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}
+
+#button1{
+    top:0px;
+    left:0;
+    background: transparent;
+    border: none !important;
+    width:170px;
+    color: red;
+}
+
+#button_text{
+    color:white
+}
+
+#dropdown {
+    background:transparent;
+    border: none;
+    color:white;
+}
+
+#vault{
+    font-family: "Cracked";
 }

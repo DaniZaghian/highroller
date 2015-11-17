@@ -1,16 +1,37 @@
-<div class = "my-container">
-	<div>
-	  Welcome, <%= @user.alias %><br>
-	  First Name: <%= @user.first_name %><br>
-	  Last Name: <%= @user.last_name %><br>
-	  Email: <%= @user.email %><br>
-	  Profile Pic: <%= image_tag("#{ @user.profile_pic_url}")%><br>
-	  Member Since: <%= @user.created_at.to_formatted_s(:long_ordinal) %>
-	</div>
-  <h3>User's events</h3>
-  <%@user.events.each do |event| %>
-    <div>
-      <%= link_to "#{event.title}", event_path %>
+<div class="my-container content"><br><br>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 avatar">
+                        <%= image_tag ("#{ @user.avatar.url(:medium)}")%>
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <p class ="profalias"><%= @user.alias %></p>
+                        <cite><i><%= @user.first_name %> <%= @user.last_name %>
+                        </i></cite>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i> <%= mail_to @user.email %>
+                            <br />
+                           <span class ="info">Member Since:</span>
+                            <%= @user.created_at.to_formatted_s(:long_ordinal) %></p>
+
+                          <%= link_to "Edit Profile", edit_user_path, class:"btn btn-danger" %>
+
+                    </div>
+                </div>
+            </div><br>
+            <div class = "well well-sm">
+            <h3><%= @user.first_name + " " + @user.last_name %>'s Created Events</h3>
+                          <%@user.events.each do |event| %>
+                            <div class = "text-left col-xs-offset-3">
+                              <%= link_to "#{event.title} in #{event.city.name}", event_path(event) %>
+                            </div>
+                          <%end%><br>
+                            <div data-no-turbolink>
+                          <%= link_to "Add an Event", new_event_path, class:"btn btn-danger" %>
+                          </div>
+            </div>
+        </div>
     </div>
-  <%end%>
 </div>

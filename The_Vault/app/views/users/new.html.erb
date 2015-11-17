@@ -1,12 +1,12 @@
 
-<div class = "container-fluid">
-  <h1>Welcome to The VAULT.</h1>
+<div class = "container-fluid content vault">
+  <h1>Welcome to The VAULT.</h1><br>
   <h3> Please sign up</h3>
 
-  <%= form_for @user do |f| %>
+  <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
     <div class ="form-group col-xs-2 col-xs-offset-5">
       <div>
-        <%= f.text_field :alias, class: "form-control", placeholder: "Alias" %>
+        <%= f.text_field :alias, class: "form-control input-group", placeholder: "Alias" %>
       </div>
       <div>
         <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
@@ -19,10 +19,10 @@
       </div>
       <div>
         <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
-      </div><br>
-      <!-- TODO -->
-      <!-- add city picker, add password confirmation -->
+      </div>
+
+      <%= f.file_field :avatar, class: "form-control" %><br>
       <%= f.submit "Sign Up", class: "btn btn-danger" %>
-    <% end %> 
+    <% end %>
   </div>
 </div>

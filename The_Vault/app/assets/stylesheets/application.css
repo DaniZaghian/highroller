@@ -13,6 +13,215 @@
  *= require twitter/bootstrap
  *= require_tree .
  *= require_self
+ *= require jquery-ui
  */
 
- 
+.content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50px;
+    height: 100%;
+    background: url('greybg.jpg');
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    display: block;
+    text-align: center;
+}
+
+.vault {
+	background: url('vault.jpg');
+	background-size: cover;
+}
+
+.city-bg-1 {
+	background: url('grim-sf.jpg');
+	background-size: cover;
+}
+
+.city-bg-2 {
+	background: url('bigbenblur.jpg');
+	background-size: cover;
+}
+
+.city-bg-3 {
+	background: url('moscow1.jpg');
+	background-size: cover;
+	background-clip: rect
+}
+
+.city-bg-4 {
+	background: url('tokyo2.jpg');
+	background-size: cover;
+}
+
+.city-bg-5 {
+	background: url('nytaxiblur.jpg');
+	background-size: cover;
+}
+.city-bg-6 {
+	background: url('rio.jpg');
+	background-size: cover;
+}
+.city-bg-7 {
+	background: url('johannesburg.jpg');
+	background-size: cover;
+}
+.city-bg-8 {
+	background: url('quebec-city.jpg');
+	background-size: cover;
+}
+.city-bg-9 {
+	background: url('auckland.jpg');
+	background-size: cover;
+}
+.city-bg-10 {
+	background: url('honolulu.jpg');
+	background-size: cover;
+}
+.city-bg-11 {
+	background: url('lagos.jpg');
+	background-size: cover;
+}
+.city-bg-12 {
+	background: url('mexico-city.jpg');
+	background-size: cover;
+}
+.city-bg-13 {
+	background: url('bangkok.jpg');
+	background-size: cover;
+}
+body {
+	color: gray;
+	text-align: center;
+}
+
+.info {
+	color: lightgray;
+}
+
+h1 {
+	font-family: 'Playfair Display', serif;
+	color: lightgray;
+	padding-top: 30px;
+	margin-top: 0px;
+}
+
+h2 {
+	font-family: 'Playfair Display', serif;
+	color: gray;
+	font-size: 36px;
+}
+
+h3 {
+	font-family: 'Playfair Display', serif;
+	margin-top: 10px;
+	color: whitesmoke;
+}
+
+#event-link {
+	color:lightgray;
+	font-size: 24px;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: firebrick;
+}
+
+.flash-error {
+    color: white;
+}
+
+#inline {
+	display: inline-block;
+}
+
+.glyphicon {
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+
+.well {
+	padding-top: 50px;
+	background: transparent;
+	border: none;
+}
+
+.selector-text {
+	color: whitesmoke;
+	font-size: 16px;
+}
+
+.navbar {
+	background-color: black;
+	font-family: 'Bitter', serif;
+	font-size: 18px;
+}
+
+.opaquebg {
+	margin-top: 30px;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding-bottom: 30px;
+	border-radius: 20px;
+}
+
+.well {
+	background-color: rgba(0, 0, 0, .4);
+	padding-bottom: 20px;
+	padding-top: 20px;
+	border-radius: 20px;
+	font-size: 15px;
+}
+
+.avatar img{
+	padding :0px;
+	border-radius: 40px;
+}
+
+.profalias {
+	color: lightgray;
+	font-size: 20px;
+}
+
+.panel {
+	margin-top: 10px;
+}
+
+#panel-heading h3 {
+	font-size: 24px;
+}
+
+.panel-body {
+	padding-bottom: 0px;
+}
+
+.panel-body li {
+	font-size: 16px;
+ }
+
+ div#events-list {
+ 	padding: 20px;
+ 	border-radius: 10px;
+ 	background-color: rgba(0, 0, 0, .6);
+ }
+
+ div#events-list a {
+ 	color: lightgray;
+ }
+
+ div#events-list a:hover {
+ 	color: firebrick;
+ }
+
+

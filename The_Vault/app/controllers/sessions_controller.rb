@@ -11,13 +11,15 @@ class SessionsController < ApplicationController
       login(@user)
       redirect_to "/users/#{@user.id}"
     else
+      flash[:error] = "Error, cannot find user"
       redirect_to "/login"
     end
   end
   #logouts the current user
   def destroy
     session[:user_id] = nil
-    redirect_to root_path
+    flash[:success] = "Successfully, logged out"
+    redirect_to login_path
   end
 
 end

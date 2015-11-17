@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114003733) do
+ActiveRecord::Schema.define(version: 20151116054516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,12 @@ ActiveRecord::Schema.define(version: 20151114003733) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
+    t.float    "lat"
+    t.float    "long"
   end
+
+  add_index "cities", ["slug"], name: "index_cities_on_slug", unique: true, using: :btree
 
   create_table "events", force: :cascade do |t|
     t.integer  "user_id"
@@ -30,17 +35,26 @@ ActiveRecord::Schema.define(version: 20151114003733) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "event_date"
+    t.string   "slug"
   end
+
+  add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "alias"
     t.string   "email"
     t.string   "password_digest"
-    t.string   "profile_pic_url"
     t.string   "first_name"
     t.string   "last_name"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "slug"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
+
+  add_index "users", ["slug"], name: "index_users_on_slug", unique: true, using: :btree
 
 end

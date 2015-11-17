@@ -1,10 +1,6 @@
-<!--navbar goes here -->
-<!-- Adds a navigation bar -->
-
-
-	    <!-- Second navbar for profile settings -->
+<!-- Second navbar for profile settings -->
 	    <nav class="navbar navbar-inverse">
-	      <div class="container">
+	      <div class="container-fluid">
 	        <!-- Brand and toggle get grouped for better mobile display -->
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
@@ -13,16 +9,45 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="/">The VAULT</a>
+	          <a class="navbar-brand" id="vault" href="/">The VAULT</a>
 	        </div>
 
 	        <!-- Collect the nav links, forms, and other content for toggling -->
 	        <div class="collapse navbar-collapse" id="navbar-collapse-4">
           <ul class="nav navbar-nav navbar-right">
 
+						<!--Dropdown for cities -->
 						<% if current_user %>
-            <li><a href="/">Home</a></li>
+					  <li class="dropdown">
+			       <a class = "dropdown-toggle disabled" href="/cities" class="dropdown-toggle" data-toggle="dropdown" data-no-turbolink>Cities</a>
+
+			       <ul class="dropdown-menu">
+			       <li><a href="/cities/san-francisco">San Francisco </a></li>
+			        <li><a href="/cities/london">London </a></li>
+			        <li><a href="/cities/moscow">Moscow </a></li>
+			        <li><a href="/cities/tokyo">Tokyo </a></li>
+			        <li><a href="/cities/auckland">Auckland</a></li>
+              <li><a href="/cities/rio-de-janeiro">Rio de Janeiro</a></li>
+              <li><a href="/cities/mexico-city">Mexico City</a></li>
+              <li><a href="/cities/lagos">Lagos</a></li>
+              <li><a href="/cities/honolulu">Honolulu</a></li>
+              <li><a href="/cities/bangkok">Bangkok</a></li>
+              <li><a href="/cities/quebec-city">Quebec City</a></li>
+              <li><a href="/cities/johannesburg">Johannesburg</a></li>
+
+			       </ul>
+			          </li>
+			          <% end %>
+
+			        <% if current_user %>
+			        <li><%= link_to "Events", events_path %></li>
+			        <% end %>
+
+					<!-- User will be directed to Post form here -->
+					<% if current_user %>
+					<li><%= link_to "Create Event", new_event_path %></li>
 						<% end %>
+
 
             <% if current_user %>
              <li> <%= link_to "Profile", user_path(current_user), class: "profile" %></li>
@@ -39,6 +64,7 @@
 							<% end %>
 
 
+ 						</ul>
 
 	        </div><!-- /.navbar-collapse -->
 	      </div><!-- /.container -->
