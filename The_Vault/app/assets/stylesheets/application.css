@@ -71,17 +71,35 @@ body {
 }
 
 h1 {
+	font-family: 'Playfair Display', serif;
 	color: lightgray;
 	padding-top: 30px;
 	margin-top: 0px;
 }
 
+h2 {
+	font-family: 'Playfair Display', serif;
+	color: gray;
+	font-size: 36px;
+}
+
 h3 {
+	font-family: 'Playfair Display', serif;
+	margin-top: 10px;
 	color: whitesmoke;
 }
 
-h2 {
-	color: whitesmoke;
+#event-link {
+	color:lightgray;
+	font-size: 24px;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: midnightblue;
 }
 
 .flash-error {
@@ -93,7 +111,8 @@ h2 {
 }
 
 .glyphicon {  
-	margin-bottom: 10px;margin-right: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
 }
 
 small {
@@ -115,8 +134,44 @@ color: #999;
 
 .navbar {
 	background-color: black;
+	font-family: 'Bitter', serif;
+	font-size: 18px;
 }
 
+.opaquebg {
+	margin-top: 30px;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding-bottom: 30px;
+	border-radius: 20px;
+}
 
+.well {
+	background-color: rgba(0, 0, 0, .7);
+	padding-bottom: 20px;
+	padding-top: 20px;
+	border-radius: 20px;
+}
 
- 
+img {
+	border-radius: 40px;
+}
+
+.profalias {
+	color: lightgray;
+	font-size: 18px;
+}
+
+.panel {
+	margin-top: 10px;
+}
+
+#panel-heading h3 {
+	font-size: 24px;
+}
+.panel-body {
+	padding-bottom: 0px;
+}
+
+.panel-body li {
+	font-size: 16px;
+ }
