@@ -49,7 +49,7 @@ City.create({name: "Bangkok",
 
 User.create!({first_name:"Bond",
               last_name:"James Bond",
-              email:"007@mi6.gov",
+              email:"007@sis.gov.uk",
               alias: "007",
               password: 'password',
               avatar_file_name:"default_profile_pic.jpg"})
