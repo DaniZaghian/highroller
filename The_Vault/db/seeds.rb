@@ -75,9 +75,9 @@ User.create!({first_name:"Lord",
               password: 'password',
               avatar_file_name:"default_profile_pic.jpg"})
 
-User.create!({first_name:"Kaiser",
-              last_name:"Sose",
-              email:"ksose@notksose.com",
+User.create!({first_name:"Keyser",
+              last_name:"Söze",
+              email:"ksoze@notksoze.com",
               alias: "notksose",
               password: 'password',
               avatar_file_name:"default_profile_pic.jpg"})
